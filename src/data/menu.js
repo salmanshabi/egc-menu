@@ -95,7 +95,7 @@ export const menuData = {
     },
     {
       id: "toasts",
-      name: { ar: "توستات وشطائر", he: "טוסטים", en: "Toasts & Sandwiches" },
+      name: { ar: "توستات وشطائر", he: "טוסטים וסנדוויצ׳ים", en: "Toasts & Sandwiches" },
       items: [
         {
           name: { ar: "توست ايطالي", he: "טוסט איטלקי", en: "Italian Toast" },

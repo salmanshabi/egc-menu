@@ -1,7 +1,7 @@
 export default function SplashScreen({ exiting }) {
   return (
     <div
-      className={`fixed inset-0 z-50 bg-menu-yellow flex items-center justify-center transition-opacity duration-500 ${
+      className={`fixed inset-0 z-50 bg-menu-cream flex items-center justify-center transition-opacity duration-500 ${
         exiting ? "opacity-0" : "opacity-100"
       }`}
     >
