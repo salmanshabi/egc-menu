@@ -1,12 +1,23 @@
+import {
+  UtensilsCrossed,
+  Salad,
+  Sandwich,
+  Flower,
+  Wheat,
+  Croissant,
+  Coffee,
+  GlassWater,
+} from "lucide-react";
+
 const sectionIcons = {
-  breakfast: "🍳",
-  salads: "🥗",
-  toasts: "🥪",
-  garden: "🌿",
-  taboon: "🫓",
-  pastries: "🥐",
-  "hot-drinks": "☕",
-  "cold-drinks": "🧃",
+  breakfast: UtensilsCrossed,
+  salads: Salad,
+  toasts: Sandwich,
+  garden: Flower,
+  taboon: Wheat,
+  pastries: Croissant,
+  "hot-drinks": Coffee,
+  "cold-drinks": GlassWater,
 };
 
 export default function SectionNav({ sections, lang, activeId, onSelect }) {
@@ -26,7 +37,7 @@ export default function SectionNav({ sections, lang, activeId, onSelect }) {
                     : "bg-menu-yellow text-menu-brown shadow-sm hover:bg-menu-yellow-warm"
                 }`}
               >
-                <span className="text-base leading-none sm:text-sm">{sectionIcons[s.id]}</span>
+                {(() => { const Icon = sectionIcons[s.id]; return <Icon size={20} strokeWidth={2.5} />; })()}
                 <span className="whitespace-normal">{s.name[lang]}</span>
               </button>
             ))}

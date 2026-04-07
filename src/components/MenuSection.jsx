@@ -1,14 +1,24 @@
 import MenuItem from "./MenuItem";
+import {
+  UtensilsCrossed,
+  Salad,
+  Sandwich,
+  Flower,
+  Wheat,
+  Croissant,
+  Coffee,
+  GlassWater,
+} from "lucide-react";
 
 const sectionIcons = {
-  breakfast: "🍳",
-  salads: "🥗",
-  toasts: "🥪",
-  garden: "🌿",
-  taboon: "🫓",
-  pastries: "🥐",
-  "hot-drinks": "☕",
-  "cold-drinks": "🧃",
+  breakfast: UtensilsCrossed,
+  salads: Salad,
+  toasts: Sandwich,
+  garden: Flower,
+  taboon: Wheat,
+  pastries: Croissant,
+  "hot-drinks": Coffee,
+  "cold-drinks": GlassWater,
 };
 
 export default function MenuSection({ section, lang }) {
@@ -16,7 +26,7 @@ export default function MenuSection({ section, lang }) {
     <section id={section.id} className="mb-6 scroll-mt-20">
       {/* Section header */}
       <div className="flex items-center gap-2 mb-3 px-1">
-        <span className="text-2xl">{sectionIcons[section.id]}</span>
+        {(() => { const Icon = sectionIcons[section.id]; return <Icon size={24} strokeWidth={2.5} className="text-menu-red" />; })()}
         <h2 className="text-xl font-bold text-menu-red">
           {section.name[lang]}
         </h2>
