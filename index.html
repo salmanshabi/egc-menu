@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;600;700&family=Noto+Sans+Hebrew:wght@400;600;700&display=swap" rel="stylesheet" />
+    <title>Eman's Garden Cafe</title>
+    <style>
+      #splash {
+        position: fixed;
+        inset: 0;
+        z-index: 9999;
+        background: #F7C948;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: opacity 0.7s ease;
+      }
+      #splash.hide {
+        opacity: 0;
+        pointer-events: none;
+      }
+      #splash img {
+        width: 208px;
+        height: 208px;
+        object-fit: contain;
+        animation: splashIn 0.8s ease-out both;
+      }
+      @keyframes splashIn {
+        0% { opacity: 0; transform: scale(0.6); }
+        100% { opacity: 1; transform: scale(1); }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Splash screen (pure HTML, no React dependency) -->
+    <div id="splash">
+      <img src="/logo.png" alt="Eman's Garden Cafe" />
+    </div>
+
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+    <script>
+      setTimeout(function() {
+        var splash = document.getElementById('splash');
+        if (splash) {
+          splash.classList.add('hide');
+          setTimeout(function() { splash.remove(); }, 700);
+        }
+      }, 2500);
+    </script>
+  </body>
+</html>
