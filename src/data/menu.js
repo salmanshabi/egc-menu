@@ -34,7 +34,7 @@ export const menuData = {
         {
           name: { ar: "فوكاتشا", he: "פוקצ׳ה", en: "Focaccia" },
           description: {
-            ar: "فوكاتشا مع زيت زيتون وملح خشن واكليل الجبل (روزمارين).",
+            ar: "فوكاتشا مع زيت زيتون وملح خشن وروزمارين.",
             he: "בציפוי פריך של מלח גס, שמן זית, ורוזמרין. מוגש עם מתבלים.",
             en: "Focaccia with olive oil, coarse salt, and rosemary. Served with seasonings.",
           },

@@ -10,8 +10,9 @@
   --color-menu-brown: #5D3A1A;
   --color-menu-cream: #FFFBEB;
   --color-menu-green: #15803D;
-  --font-arabic: "Noto Sans Arabic", sans-serif;
-  --font-hebrew: "Noto Sans Hebrew", sans-serif;
+  --font-arabic: "Changa", sans-serif;
+  --font-hebrew: "Rubik", sans-serif;
+  --font-rubik: "Rubik", sans-serif;
 }
 
 body {
