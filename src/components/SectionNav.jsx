@@ -31,14 +31,14 @@ export default function SectionNav({ sections, lang, activeId, onSelect }) {
                 key={s.id}
                 onClick={() => onSelect(s.id)}
                 aria-pressed={activeId === s.id}
-                className={`grid h-[48px] w-full min-w-0 cursor-pointer grid-rows-[1fr_auto] place-items-center rounded-xl px-1.5 text-center text-xs leading-snug font-extrabold transition-colors duration-200 sm:h-[54px] sm:w-[84px] sm:flex-shrink-0 sm:px-2 sm:text-xs ${
+                className={`flex h-[48px] w-full min-w-0 cursor-pointer flex-col items-center justify-center gap-0.5 rounded-xl px-1.5 text-center text-xs leading-snug font-extrabold transition-colors duration-200 sm:h-[54px] sm:w-[84px] sm:flex-shrink-0 sm:px-2 sm:text-xs ${
                   activeId === s.id
                     ? "bg-menu-red text-white shadow-md ring-2 ring-menu-red/15"
                     : "bg-menu-yellow text-menu-brown shadow-sm hover:bg-menu-yellow-warm"
                 }`}
               >
-                {(() => { const Icon = sectionIcons[s.id]; return <Icon size={18} strokeWidth={2.5} className="self-end" />; })()}
-                <span className="whitespace-normal self-start">{s.name[lang]}</span>
+                {(() => { const Icon = sectionIcons[s.id]; return <Icon size={18} strokeWidth={2.5} className="shrink-0" />; })()}
+                <span className="whitespace-normal line-clamp-2">{s.name[lang]}</span>
               </button>
             ))}
           </div>
