@@ -4,7 +4,7 @@ import SectionNav from "./components/SectionNav";
 import MenuSection from "./components/MenuSection";
 import { menuData } from "./data/menu";
 
-const fontClass = { ar: "font-arabic", he: "font-hebrew", en: "font-rubik" };
+const fontClass = { ar: "font-arabic", he: "font-hebrew", en: "font-english" };
 
 export default function App() {
   const [lang, setLang] = useState("ar");
